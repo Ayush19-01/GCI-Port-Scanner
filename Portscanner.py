@@ -1,14 +1,14 @@
+#Made for the sole purpose of GCI 2019
 import sys
 import os
 import socket
-
 ip = input("Enter IP: ")
 z=0
 try:
     m1= int(input("Enter starting port:"))
     m2=int(input("Enter the last port:"))
     if m2<m1:
-        print("please enter a valid range")
+        print("Please enter a valid range")
     elif m2>m1:
         for i in range(m1,m2+1):
             connection=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -18,5 +18,5 @@ try:
             connection.close()
     print("Scan Complete", z, "port(s) are open.")
 except:
-    print("Host Ip can't be resloved")
+    print("Host Ip can't be resloved, please try again!")
 
